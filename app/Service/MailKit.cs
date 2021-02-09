@@ -8,7 +8,7 @@ using MimeKit;
 
 namespace app.Service
 {
-    public class Mail
+    public class Mail_kit
     {
         public async Task SendMailAsync(string mail, string subject, string message)
         {
@@ -27,7 +27,7 @@ namespace app.Service
                 await client.DisconnectAsync(true);
             }
 
-        }
+        } 
 
     }
 }

@@ -36,10 +36,15 @@ namespace app.Controllers
         }
 
         public async Task<IActionResult> SendMessage() {
-            Mail emailService = new Mail();
+            var emailService = new Mail_kit();
             await emailService.SendMailAsync("bp240@outlook.com", "test", "test");
+            return RedirectToAction("Index");            
+        }
+        public  IActionResult SendMes()
+        {
+            var email = new MailSystem();
+            email.SendMail("bp240@outlook.com", "test", "test");
             return RedirectToAction("Index");
-            
         }
     }
 }
