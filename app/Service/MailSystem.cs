@@ -19,7 +19,7 @@ namespace app.Service
 
             m.Subject = subject;
             m.Body = message;
-            SmtpClient smtp = new SmtpClient("smtp.yandex.ru", 465);
+            SmtpClient smtp = new SmtpClient("smtp.yandex.ru", 587);
             smtp.Credentials = new NetworkCredential("drogremtalpavlov@yandex.ru", "21ruPAVLOV");
             smtp.EnableSsl = false;
             smtp.SendMailAsync(m);
